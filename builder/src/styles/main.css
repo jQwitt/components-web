@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+.builder {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.builder__editor {
+  width: 50%;
+  padding: 1rem;
+}
+.builder__preview-live {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.builder__preview-code {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #47476b;
+  font-family: "Source Code Pro", monospace;
+  color: #ffb617;
+  font-weight: 900;
+}
+
+.toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.btn {
+  padding: 1rem;
+}

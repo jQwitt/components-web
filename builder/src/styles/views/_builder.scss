@@ -1,0 +1,41 @@
+.builder {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: row;
+
+  &__editor {
+    width: 50%;
+    padding: 1rem;
+  }
+
+  &__preview {
+    &-live {
+      width: 50%;
+      padding: 1rem;
+
+      border-radius: 0.5rem;
+    }
+
+    &-code {
+      width: 50%;
+      padding: 1rem;
+
+      border-radius: 0.5rem;
+
+      background-color: $--background-dark;
+      font-family: "Source Code Pro", monospace;
+      color: $--text-dark;
+      font-weight: 900;
+    }
+  }
+}
+
+.toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
