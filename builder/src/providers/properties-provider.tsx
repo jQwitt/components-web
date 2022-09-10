@@ -1,18 +1,4 @@
 import React from "react";
-
-type StylePayload = {
-  style: string;
-  value: string;
-  units: string | null;
-};
-
-type Dispatch = (action: Action) => void;
-
-interface Action {
-  type: string;
-  payload: StylePayload;
-}
-
 interface Properties {
   styles: Object;
 }

@@ -4,6 +4,13 @@
   right: 1rem;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 *,
 *::after,
 *::before {
@@ -18,20 +25,42 @@ html {
 }
 
 .btn {
+  font-size: 1rem;
   z-index: 1;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 0.125rem solid black;
+}
+.btn i {
+  font-size: 1rem;
+  margin: 0.5rem 0rem;
+}
+.btn .flex-row > p {
+  margin-left: 0.5rem;
+}
+.btn:hover {
+  color: #1783ff;
+  border-color: #1783ff;
+  background-color: #d5e8ff;
+  transition: all 0.25s;
+}
+
+.slider-label {
+  margin-top: 0.125rem;
+}
+.slider-input {
+  padding: 0.5rem;
 }
 
 .editor {
-  width: 50%;
   padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem lightgray;
 }
 
 .preview {
   position: relative;
-  width: 50%;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem lightgray;
 }
 .preview > div {
   width: 100%;
@@ -41,16 +70,29 @@ html {
 }
 .preview-code {
   background-color: #47476b;
-  font-family: "Source Code Pro", monospace;
+  border-radius: 0.5rem;
   color: #ffb617;
+  font-family: "Source Code Pro", monospace;
   font-weight: 900;
+}
+.preview #component {
+  all: unset;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .builder {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   display: flex;
   flex-direction: row;
+}
+.builder > div {
+  width: 50%;
+  margin: 0 0.5rem;
 }

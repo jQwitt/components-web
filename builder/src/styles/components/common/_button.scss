@@ -1,0 +1,24 @@
+.btn {
+  font-size: 1rem;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 0.125rem solid black;
+
+  & i {
+    font-size: 1rem;
+    margin: 0.5rem 0rem;
+  }
+
+  & .flex-row > p {
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    color: $--highlight;
+    border-color: $--highlight;
+    background-color: $--highlight-light;
+    transition: all 0.25s;
+  }
+}

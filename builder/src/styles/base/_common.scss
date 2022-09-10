@@ -4,3 +4,11 @@
   top: 1rem;
   right: 1rem;
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+}

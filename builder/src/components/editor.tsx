@@ -1,37 +1,42 @@
 import React from "react";
 import { useProperties } from "../providers/properties-provider";
+import Button from "./common/button";
+import Slider from "./common/slider";
 
 // add interface for props
 const Editor: React.FC<any> = () => {
   const { state, dispatch } = useProperties();
   // TODO: make configurable?
-  const properties = ["padding", "margin", "border-radius"];
+  const properties: StyleProperty[] = [
+    { style: "padding", value: "0", units: "rem" },
+    { style: "borderRadius", value: "100", units: "rem" },
+    { style: "backgroundColor", value: "red", units: null },
+  ];
+  // TODO: input type= color
+
+  const formatLabel = (s: string) => s[0].toUpperCase() + s.substring(1);
 
   return (
     <div className="editor">
-      <button className="btn" onClick={() => console.log(state)}>
-        log state to console
-      </button>
-      {properties.map((property) => (
-        <>
-          <p>{property}</p>
-          <input
-            type="range"
-            min="1"
-            max="100"
-            onChange={({ target }) => {
+      <h3>CSS</h3>
+      {properties.map(({ style, units }) => (
+        <div key={"_" + style}>
+          <Slider
+            label={formatLabel(style)}
+            onChange={(value: string) => {
               dispatch({
                 type: "style",
                 payload: {
-                  style: property,
-                  value: target.value,
-                  units: null,
+                  style,
+                  value: value,
+                  units,
                 },
               });
             }}
           />
-        </>
+        </div>
       ))}
+      <Button text="click me!" icon="cube" />
     </div>
   );
 };

@@ -1,9 +1,5 @@
 .preview {
   position: relative;
-  width: 50%;
-
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem lightgray;
 
   & > div {
     width: 100%;
@@ -15,8 +11,21 @@
 
   &-code {
     background-color: $--background-dark;
-    font-family: "Source Code Pro", monospace;
+    border-radius: 0.5rem;
     color: $--text-dark;
+    font-family: "Source Code Pro", monospace;
     font-weight: 900;
+  }
+
+  #component {
+    all: unset;
+
+    // TODO - add toggle?
+    background-color: red;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
