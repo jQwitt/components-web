@@ -1,0 +1,103 @@
+/*
+  background: #3e4366
+  sun: #ffd700
+  dark: #262a44
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  background-color: #3e4366;
+}
+
+.sun {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+
+  right: 0;
+  top: 25%;
+  border-radius: 10rem;
+
+  animation: sun-x 2s ease-in-out 0.15s forwards;
+}
+
+.sun:after {
+  content: "";
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+
+  right: 0;
+  top: 0;
+  border-radius: 10rem;
+
+  background-color: #ffd700;
+  animation: sun-y 2s ease-in-out 0.15s forwards;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+}
+
+.small {
+  margin: 1rem;
+  width: 12rem;
+  height: 15rem;
+  position: relative;
+  display: inline-block;
+
+  border-radius: 0.5rem;
+  border: 0.125rem solid #262a44;
+  background-color: #3e4366;
+}
+
+.small::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0.5rem;
+  left: 0;
+
+  z-index: -1;
+  border-radius: 0.5rem;
+  background-color: #262a44;
+  animation: shadow 2s ease-in-out forwards;
+}
+
+@keyframes shadow {
+  0% {
+    transform: translate(-1rem, 0.5rem);
+  }
+  100% {
+    transform: translate(1rem, 0.5rem);
+  }
+}
+
+@keyframes sun-x {
+  to {
+    transform: translate(calc(-100vw + 4rem));
+  }
+}
+
+@keyframes sun-y {
+  50% {
+    transform: translateY(-4rem);
+  }
+}
