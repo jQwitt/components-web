@@ -1,4 +1,10 @@
-@import "./base/_default.scss";
-@import "./abstracts/_variables.scss";
-@import "./views/_builder.scss";
-@import "./components/_button.scss";
+@import "./abstracts/_variables";
+
+@import "./base/_common";
+@import "./base/_default";
+
+@import "./components/_button";
+@import "./components/_editor";
+@import "./components/_preview";
+
+@import "./views/_builder";

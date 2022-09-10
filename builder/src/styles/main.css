@@ -1,3 +1,9 @@
+.toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 *,
 *::after,
 *::before {
@@ -11,6 +17,35 @@ html {
   font-family: "Lato", sans-serif;
 }
 
+.btn {
+  z-index: 1;
+  padding: 1rem;
+}
+
+.editor {
+  width: 50%;
+  padding: 1rem;
+}
+
+.preview {
+  position: relative;
+  width: 50%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem lightgray;
+}
+.preview > div {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.preview-code {
+  background-color: #47476b;
+  font-family: "Source Code Pro", monospace;
+  color: #ffb617;
+  font-weight: 900;
+}
+
 .builder {
   box-sizing: border-box;
   width: 100vw;
@@ -18,32 +53,4 @@ html {
   padding: 1rem;
   display: flex;
   flex-direction: row;
-}
-.builder__editor {
-  width: 50%;
-  padding: 1rem;
-}
-.builder__preview-live {
-  width: 50%;
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-.builder__preview-code {
-  width: 50%;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background-color: #47476b;
-  font-family: "Source Code Pro", monospace;
-  color: #ffb617;
-  font-weight: 900;
-}
-
-.toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-.btn {
-  padding: 1rem;
 }
