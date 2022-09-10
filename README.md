@@ -10,6 +10,6 @@ See [Running the Builder](./builder/README.md).
 
 ### Recommended VSCode Extensions
 
-[Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
-[Markdown Preview](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+[Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)\
+[Markdown Preview](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)\
 [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
