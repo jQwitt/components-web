@@ -2,12 +2,19 @@ import React from "react";
 
 interface ButtonProps {
   icon?: string;
+  className?: string;
   onClick?: () => void;
   toggle?: boolean;
   text?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ icon, onClick, toggle, text }) => {
+const Button: React.FC<ButtonProps> = ({
+  icon,
+  className,
+  onClick,
+  toggle,
+  text,
+}) => {
   const handleClick = () => {
     onClick?.();
   };
@@ -29,7 +36,10 @@ const Button: React.FC<ButtonProps> = ({ icon, onClick, toggle, text }) => {
   }, [icon, text]);
 
   return (
-    <button className={`${toggle ? "toggle" : ""} btn`} onClick={handleClick}>
+    <button
+      className={`${toggle ? "toggle" : ""} btn ${className}`}
+      onClick={handleClick}
+    >
       {buttonContent}
     </button>
   );

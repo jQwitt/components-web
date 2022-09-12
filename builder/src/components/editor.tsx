@@ -1,16 +1,15 @@
 import React from "react";
 import { useProperties } from "../providers/properties-provider";
-import Button from "./common/button";
-import Slider from "./common/slider";
+import { Button, ColorPicker, Slider } from "./inputs";
 
 // add interface for props
 const Editor: React.FC<any> = () => {
   const { state, dispatch } = useProperties();
   // TODO: make configurable?
-  const properties: StyleProperty[] = [
+  // TODO remove this typing
+  const properties: StylePropertyPayload[] = [
     { style: "padding", value: "0", units: "rem" },
     { style: "borderRadius", value: "100", units: "rem" },
-    { style: "backgroundColor", value: "red", units: null },
   ];
   // TODO: input type= color
 
@@ -28,7 +27,7 @@ const Editor: React.FC<any> = () => {
                 type: "style",
                 payload: {
                   style,
-                  value: value,
+                  value,
                   units,
                 },
               });
@@ -36,7 +35,20 @@ const Editor: React.FC<any> = () => {
           />
         </div>
       ))}
-      <Button text="click me!" icon="cube" />
+      <ColorPicker
+        label="Background Color"
+        onChange={(value: string) => {
+          console.log(value);
+          dispatch({
+            type: "style",
+            payload: {
+              style: "backgroundColor",
+              value,
+              units: null,
+            },
+          });
+        }}
+      />
     </div>
   );
 };

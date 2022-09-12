@@ -1,5 +1,6 @@
 import React from "react";
-interface Properties {
+import { style } from "./helpers";
+export interface Properties {
   styles: Object;
 }
 
@@ -20,8 +21,7 @@ const PropertiesContext = React.createContext<PropertiesContextType>(DEFAULT);
 const propertiesReducer = (state: Properties, action: Action) => {
   switch (action.type) {
     case "style": {
-      const { style, value, units } = action.payload;
-      return { styles: { ...state.styles, [style]: `${value}${units ?? ""}` } };
+      return style(state, action);
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);

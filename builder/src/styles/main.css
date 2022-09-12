@@ -46,6 +46,10 @@ html {
   transition: all 0.25s;
 }
 
+.colorpicker-button {
+  margin-top: 0.25rem;
+}
+
 .slider-label {
   margin-top: 0.125rem;
 }

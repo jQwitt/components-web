@@ -7,6 +7,7 @@
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
     "react": "^16.9.0",
+    "react-color": "^2.19.3",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.2"
   },
@@ -33,6 +34,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-color": "^3.0.6",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "eslint-config-standard-with-typescript": "^22.0.0",
     "eslint-plugin-import": "^2.25.2",

@@ -3,8 +3,9 @@
 @import "./base/_common";
 @import "./base/_default";
 
-@import "./components/common/_button";
-@import "./components/common/_slider";
+@import "./components/inputs/_button";
+@import "./components/inputs/_colorpicker";
+@import "./components/inputs/_slider";
 @import "./components/_editor";
 @import "./components/_preview";
 

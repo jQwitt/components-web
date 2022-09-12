@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useProperties } from "../../providers/properties-provider";
-import Button from "../common/button";
+import Button from "../inputs/button";
 import PreviewCode from "./preview-code";
 import PreviewLive from "./preview-live";
 
