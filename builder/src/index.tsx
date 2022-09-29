@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Builder } from "./views";
+import { Builder } from "./pages";
 
 import "./styles/main.css";
 

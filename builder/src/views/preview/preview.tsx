@@ -1,13 +1,11 @@
 import React from "react";
 
-import { useProperties } from "../../providers/properties-provider";
-import Button from "../inputs/button";
+import { Button } from "../../components";
 import PreviewCode from "./preview-code";
 import PreviewLive from "./preview-live";
 
 const Preview: React.FC = () => {
   const [codeView, setCodeView] = React.useState<boolean>(false);
-  const { state, dispatch } = useProperties();
 
   const handleClick = React.useCallback(() => {
     setCodeView((prev) => !prev);

@@ -1,10 +1,10 @@
 import React from "react";
-import { useProperties } from "../providers/properties-provider";
-import { Button, ColorPicker, Slider } from "./inputs";
+import { useProperties } from "../../providers/properties-provider";
+import { ColorPicker, Slider } from "../../components";
 
 // add interface for props
 const Editor: React.FC<any> = () => {
-  const { state, dispatch } = useProperties();
+  const { dispatch } = useProperties();
   // TODO: make configurable?
   // TODO remove this typing
   const properties: StylePropertyPayload[] = [

@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Editor, Preview } from "../components";
-import { PropertiesProvider } from "../providers/properties-provider";
+import { Editor, Preview } from "../../views";
+import { PropertiesProvider } from "../../providers";
 
 const Builder: React.FC = () => {
   return (
