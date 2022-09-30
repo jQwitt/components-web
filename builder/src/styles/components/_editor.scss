@@ -3,4 +3,12 @@
 
   border-radius: $--border-radius-lightly-rounded;
   box-shadow: 0 0.5rem 1rem lightgray;
+
+  &-html {
+    & > textarea {
+      min-width: 100%;
+      resize: none;
+      min-height: 5rem;
+    }
+  }
 }
