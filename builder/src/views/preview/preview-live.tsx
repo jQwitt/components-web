@@ -7,9 +7,11 @@ const PreviewLive: React.FC = () => {
 
   return (
     <div className="preview-live">
-      <div id="component" style={state.styles}>
-        {state.html}
-      </div>
+      <div
+        id="component"
+        style={state.styles}
+        dangerouslySetInnerHTML={{ __html: state.html }}
+      ></div>
     </div>
   );
 };

@@ -7,6 +7,7 @@ const PreviewCode: React.FC = () => {
 
   return (
     <div className="preview-code">
+      <pre>{state.html}</pre>
       <pre>{JSON.stringify(state.styles, null, 2)}</pre>
     </div>
   );
