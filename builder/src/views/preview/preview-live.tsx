@@ -8,7 +8,7 @@ const PreviewLive: React.FC = () => {
   return (
     <div className="preview-live">
       <div id="component" style={state.styles}>
-        I am a component
+        {state.html}
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ type PropertiesContextType = {
 
 const DEFAULT: PropertiesContextType = {
   state: {
-    html: "",
+    html: "I am a component",
     styles: {},
   },
   dispatch: (action: Action) => null,

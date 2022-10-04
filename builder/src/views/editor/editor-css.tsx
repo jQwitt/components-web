@@ -36,7 +36,6 @@ const EditorCSS: React.FC<EditorCSSProps> = ({ properties }) => {
       <ColorPicker
         label="Background Color"
         onChange={(value: string) => {
-          console.log(value);
           dispatch({
             type: ActionType.STYLE,
             payload: {
