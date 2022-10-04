@@ -1,6 +1,8 @@
 import React from "react";
 import { Slider, ColorPicker } from "../../components";
 import { useProperties } from "../../providers/properties-provider";
+import { StylePropertyPayload } from "../../types/properties";
+import { ActionType } from "../../types/reducers";
 
 interface EditorCSSProps {
   properties: StylePropertyPayload[];
@@ -20,7 +22,7 @@ const EditorCSS: React.FC<EditorCSSProps> = ({ properties }) => {
             label={formatLabel(style)}
             onChange={(value: string) => {
               dispatch({
-                type: "style",
+                type: ActionType.STYLE,
                 payload: {
                   style,
                   value,
@@ -36,7 +38,7 @@ const EditorCSS: React.FC<EditorCSSProps> = ({ properties }) => {
         onChange={(value: string) => {
           console.log(value);
           dispatch({
-            type: "style",
+            type: ActionType.STYLE,
             payload: {
               style: "backgroundColor",
               value,

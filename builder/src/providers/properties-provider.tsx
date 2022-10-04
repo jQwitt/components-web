@@ -1,6 +1,9 @@
 import React from "react";
-import { style } from "./helpers";
+import { HTMLPropertyPayload, StylePropertyPayload } from "../types/properties";
+import { Action, ActionType, Dispatch } from "../types/reducers";
+import { html, style } from "./helpers";
 export interface Properties {
+  html: string;
   styles: Object;
 }
 
@@ -11,6 +14,7 @@ type PropertiesContextType = {
 
 const DEFAULT: PropertiesContextType = {
   state: {
+    html: "",
     styles: {},
   },
   dispatch: (action: Action) => null,
@@ -20,8 +24,11 @@ const PropertiesContext = React.createContext<PropertiesContextType>(DEFAULT);
 
 const propertiesReducer = (state: Properties, action: Action) => {
   switch (action.type) {
-    case "style": {
-      return style(state, action);
+    case ActionType.HTML: {
+      return html(state, action.payload as HTMLPropertyPayload);
+    }
+    case ActionType.STYLE: {
+      return style(state, action.payload as StylePropertyPayload);
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);

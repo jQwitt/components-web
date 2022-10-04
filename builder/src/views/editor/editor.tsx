@@ -1,12 +1,11 @@
 import React from "react";
-import { useProperties } from "../../providers/properties-provider";
+import { StylePropertyPayload } from "../../types/properties";
 import EditorCSS from "./editor-css";
 import EditorHTML from "./editor-html";
 import EditorJS from "./editor-js";
 
 // add interface for props
 const Editor: React.FC<any> = () => {
-  const { dispatch } = useProperties();
   // TODO: make configurable?
   // TODO remove this typing
   const properties: StylePropertyPayload[] = [
